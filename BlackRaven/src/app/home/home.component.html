@@ -1,3 +1,16 @@
-<!-- Welcom message -->
-<div>Welcome message</div>
+<!-- Welcome message -->
+<div>{{welcomeMessage}}</div>
 <!-- Footer -->
+
+<div class="card" style="width: 18rem;" ng-repeat="">
+  <img class="card-img-top" src="{{game.imageUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{game.title}}</h5>
+    <p class="card-text">{{game.description}}</p>
+    <a href="#" class="btn btn-primary">Go to Game</a>
+  </div>
+</div>
+
+<app-tictaktoe></app-tictaktoe>
+
+<app-form></app-form>
