@@ -1,3 +1,28 @@
+<div class="container">
+  <h1>Login</h1>
+  <form class="col-6">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">alterEgo</label>
+      <input type="text" class="form-control" id="alterEgo">
+    </div>
+    <div class="form-group">
+      <label for="power">Hero Power</label>
+      <select class="form-control" name="power" id="power" required>
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-dark">Submit</button>
+
+  </form>
+</div>
+
 <p>
-  login-form works!
+  login-form works! 
+  {{diagnostic}}
 </p>
