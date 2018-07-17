@@ -8,7 +8,7 @@ import {User} from '../shared/user'
 export class LoginFormComponent {
 powers = ['super weak', 'extra long hair', 'blushing', 'smelly farts']
 
-model = new User(69, 'getsy', this.powers[0], 'two left hands');
+model = new User(69, 'super-base', this.powers[0], 'two left hands');
 
 submitted = false;
 
