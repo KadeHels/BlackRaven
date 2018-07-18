@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,15 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { environment } from '../environments/environment';
 
-const appRoutes: Routes = [
-  { path: 'login-form', component: LoginFormComponent },
-  { path: 'registration-form', component: RegistrationFormComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,10 +23,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: !environment.production } // <-- debugging purposes only
-    )
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
