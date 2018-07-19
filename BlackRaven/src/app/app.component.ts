@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { User } from './shared/user';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Black Raven';
+
+  // Main user for the site
+  public sessionUser: User;
 }
