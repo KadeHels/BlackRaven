@@ -10,7 +10,6 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { GravityCalculatorComponent } from './components/gravity-calculator/gravity-calculator.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { GravityCalculatorComponent } from './components/gravity-calculator/grav
     NavbarComponent,
     LoginFormComponent,
     RegistrationFormComponent,
-    PageNotFoundComponent,
-    GravityCalculatorComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

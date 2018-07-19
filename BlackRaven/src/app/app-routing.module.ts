@@ -6,17 +6,11 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { environment } from '../environments/environment';
-import { GravityCalculatorComponent } from './components/gravity-calculator/gravity-calculator.component';
 
 const routes: Routes = [
   { path: 'login-form', component: LoginFormComponent },
   { path: 'registration-form', component: RegistrationFormComponent },
   { path: 'home', component: HomeComponent },
-
-  // Games and Tools
-  { path: 'gravity-calculator', component: GravityCalculatorComponent },
-
-  // Defaults
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
