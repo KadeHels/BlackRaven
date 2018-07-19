@@ -8,7 +8,8 @@ import {User} from '../shared/user'
 export class LoginFormComponent {
 powers = ['super weak', 'extra long hair', 'blushing', 'smelly farts']
 
-model = new User(69, 'super-base', this.powers[0], 'two left hands');
+model = new User('super-base', 'two left hands');
+
 
 submitted = false;
 
@@ -17,3 +18,4 @@ onSubmit() {this.submitted = true; }
 get diagnostic() {return JSON.stringify(this.model); }
 
 }
+

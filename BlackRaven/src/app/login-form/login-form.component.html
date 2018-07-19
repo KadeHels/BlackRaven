@@ -12,18 +12,11 @@
     </div>
 
     <div class="form-group">
-      <label for="alterEgo">alterEgo</label>
-      <input type="text" class="form-control" id="alterEgo"
-      [(ngModel)]="model.alterEgo" name="alterEgo">
+      <label for="password">password</label>
+      <input type="text" class="form-control" id="password"
+      [(ngModel)]="model.password" name="password">
     </div>
-    <div class="form-group">
-      <label for="power">Hero Power</label>
-      <select class="form-control" name="power" id="power" required
-      [(ngModel)]="model.power" name="power">
-          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-      </select>
-    </div>
-
+  
     <button type="submit" class="btn btn-dark">Submit</button>
 
   </form>
