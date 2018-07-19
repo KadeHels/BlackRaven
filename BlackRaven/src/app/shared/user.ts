@@ -1,8 +1,8 @@
 export class User {
     constructor(
-        public id: number,
-        public name: string,
-        public power: string,
-        public alterEgo?: string
+        public name: string = null,
+        public password: string = null,
+        public confirmPassword: string = null
       ) {  }
+      public id?: number;
 }

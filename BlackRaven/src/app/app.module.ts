@@ -7,7 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { GravityCalculatorComponent } from './components/gravity-calculator/gravity-calculator.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     HomeComponent,
     NavbarComponent,
     LoginFormComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    PageNotFoundComponent,
+    GravityCalculatorComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
