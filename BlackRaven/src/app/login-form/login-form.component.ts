@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component} from '@angular/core';
+import {User} from '../shared/user' 
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent {
+powers = ['super weak', 'extra long hair', 'blushing', 'smelly farts']
 
-  constructor() { }
+model = new User(69, 'super-base', this.powers[0], 'two left hands');
 
-  ngOnInit() {
-  }
+submitted = false;
+
+onSubmit() {this.submitted = true; }
+
+get diagnostic() {return JSON.stringify(this.model); }
 
 }
