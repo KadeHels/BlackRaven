@@ -1,31 +1,37 @@
 <div class="jumbotron">
 
+<div class='row mb-3'>
+  <div class='col'>
+      {{description}}
+  </div>
+</div>
+
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col">
       <div class="input-group">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" (click)="calcDistance()">Calc</button>
         </span>
         <input type="number" [(ngModel)]="distance" class="form-control" placeholder="Distance" >
         <span class="input-group-btn">
-            <button class="btn btn-default" type="button" >m</button>
+            <button class="btn btn-default" type="button" (click)="changeDistance()">{{distanceUnit}}</button>
         </span>
       </div><!-- /input-group -->
-    </div><!-- /.col-lg-4 -->
+    </div><!-- /.col -->
 
-    <div class="col-lg-4">
+    <div class="col">
       <div class="input-group">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" (click)="calcGravity()">Calc</button>
         </span>
         <input type="number" [(ngModel)]="gravity" class="form-control" placeholder="Gravity" >
         <span class="input-group-btn">
-            <button class="btn btn-default" type="button" >m/s^2</button>
+            <button class="btn btn-default" type="button" (click)="changeGravity()">{{gravityUnit}}</button>
         </span>
       </div><!-- /input-group -->
-    </div><!-- /.col-lg-4 -->
+    </div><!-- /.col -->
 
-      <div class="col-lg-4">
+      <div class="col">
         <div class="input-group">
           <span class="input-group-btn">
             <button class="btn btn-default" type="button" (click)="calcTime()">Calc</button>
@@ -35,7 +41,7 @@
               <button class="btn btn-default" type="button" >s</button>
           </span>
         </div><!-- /input-group -->
-      </div><!-- /.col-lg-4 -->
+      </div><!-- /.col-->
   </div><!-- /.row -->
 
 </div><!-- /.jumbotron -->
