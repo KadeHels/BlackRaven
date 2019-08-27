@@ -10,7 +10,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { GravityCalculatorComponent, AboutKadeComponent } from './components/index';
+import { GravityCalculatorComponent, AboutKadeComponent, PictureLibraryComponent } from './components/index';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { GravityCalculatorComponent, AboutKadeComponent } from './components/ind
     RegistrationFormComponent,
     PageNotFoundComponent,
     GravityCalculatorComponent,
-    AboutKadeComponent
+    AboutKadeComponent,
+    PictureLibraryComponent
   ],
   imports: [
     BrowserModule,

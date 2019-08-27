@@ -1,0 +1,12 @@
+<div class='contianer'>
+  <div class='row'>
+    <div class='col-4' *ngFor='let i of images'>
+      <div class="card">
+        <img class="card-img-top" src="{{i.location}}" alt="{{i.description}}">
+        <div class="card-body">
+          <h5 class="card-title">{{i.description}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

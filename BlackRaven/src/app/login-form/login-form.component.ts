@@ -1,12 +1,12 @@
 import { Component} from '@angular/core';
-import {User} from '../shared/user' 
+import {User} from '../shared/classes/user';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
-powers = ['super weak', 'extra long hair', 'blushing', 'smelly farts']
+powers = ['super weak', 'extra long hair', 'blushing', 'smelly farts'];
 
 model = new User('super-base', 'two left hands');
 

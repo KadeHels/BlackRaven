@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { environment } from '../environments/environment';
 import { GravityCalculatorComponent } from './components/gravity-calculator/gravity-calculator.component';
 import { AboutKadeComponent } from './components/about-kade/about-kade.component';
+import { PictureLibraryComponent } from './components/picture-library/picture-library.component';
 
 const routes: Routes = [
   { path: 'login-form', component: LoginFormComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
 
   // Games and Tools
   { path: 'gravity-calculator', component: GravityCalculatorComponent },
+  { path: 'picture-library', component: PictureLibraryComponent },
 
   // Defaults
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -29,7 +31,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(
       routes,
-      { enableTracing: !environment.production } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
   ],
   exports: [ RouterModule ]

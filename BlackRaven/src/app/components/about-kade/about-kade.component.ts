@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-kade.component.css']
 })
 export class AboutKadeComponent implements OnInit {
-  public description = 'Kade Helseth is a dedicated software engineer witha passion for Full Stack development.';
+  public description = 'Kade Helseth is a dedicated software engineer with a passion for Full Stack development.';
 
   constructor() { }
 
