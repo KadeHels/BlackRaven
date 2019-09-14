@@ -1,5 +1,5 @@
 export enum LookupKey {
-    username = 'username',
-    password = 'password',
-    id = 'id'
+    username = 1,
+    password,
+    id
 }

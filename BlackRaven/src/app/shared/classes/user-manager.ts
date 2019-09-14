@@ -32,7 +32,7 @@ export class UserManager {
 
     private setusername(username: string) {
         console.log('Saving username: ' + username);
-        DataManager.saveData('LookupKey.username', username);
+        DataManager.saveData(LookupKey.username, username);
     }
 
     private setPassword(password: string) {
@@ -43,6 +43,10 @@ export class UserManager {
 
         console.log('Test decrypt');
         console.log(Encryption.decryptText(tempPass, this.user.username));
+
+        console.log('Test getData');
+         console.log(DataManager.getData(this.lookupKey.username.toString()));
+         console.log(DataManager.getData(this.lookupKey.password.toString()));
     }
 
     private isUsernameValid(username: string): boolean {
