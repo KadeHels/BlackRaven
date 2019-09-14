@@ -1,8 +1,17 @@
 export class User {
-    constructor(
-        public name: string = null,
-        public password: string = null,
-        public confirmPassword: string = null
-      ) {  }
-      public id?: number;
+
+  public username: string;
+  public password: string;
+  public confirmPassword: string;
+  private isLockedOut: boolean;
+  private id: number;
+
+  User() {
+    this.username = '';
+    this.password = '';
+    this.confirmPassword = '';
+    this.id = 1;
+    this.isLockedOut = false;
+  }
+
 }

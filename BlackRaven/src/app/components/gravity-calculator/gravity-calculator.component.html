@@ -12,7 +12,7 @@
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" (click)="calcDistance()">Calc</button>
         </span>
-        <input type="number" [(ngModel)]="distance" class="form-control" placeholder="Distance" >
+        <input type="number" (input)="distance" class="form-control" placeholder="Distance" >
         <span class="input-group-btn">
             <button class="btn btn-default" type="button" (click)="changeDistance()">{{distanceUnit}}</button>
         </span>
@@ -24,7 +24,7 @@
         <span class="input-group-btn">
           <button class="btn btn-default" type="button" (click)="calcGravity()">Calc</button>
         </span>
-        <input type="number" [(ngModel)]="gravity" class="form-control" placeholder="Gravity" >
+        <input type="number" (input)="gravity" class="form-control" placeholder="Gravity" >
         <span class="input-group-btn">
             <button class="btn btn-default" type="button" (click)="changeGravity()">{{gravityUnit}}</button>
         </span>
@@ -36,7 +36,7 @@
           <span class="input-group-btn">
             <button class="btn btn-default" type="button" (click)="calcTime()">Calc</button>
           </span>
-          <input type="number" [(ngModel)]="time" class="form-control" placeholder="Time" >
+          <input type="number" (input)="time" class="form-control" placeholder="Time" >
           <span class="input-group-btn">
               <button class="btn btn-default" type="button" >s</button>
           </span>
