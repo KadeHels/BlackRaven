@@ -14,7 +14,7 @@ export class UserManager {
     }
 
     login() {
-
+        console.log('Login');
     }
 
     createNewUser(newUser: User) {
@@ -22,33 +22,32 @@ export class UserManager {
         if (this.isUsernameValid(newUser.username) && this.isPasswordValid(newUser.password, newUser.confirmPassword)) {
 
             this.user = newUser;
-            this.setusername(newUser.username);
+
+            this.setId();
+            this.setUsername(newUser.username);
             this.setPassword(newUser.password);
         } else {
             console.log('Cannot Login!');
             console.log(newUser);
+            throw new Error('Cannot Login!');
         }
     }
 
-    private setusername(username: string) {
-        console.log('Saving username: ' + username);
+    // Set Value
+    private setId() {
+        DataManager.saveData(LookupKey.id, Date.now());
+    }
+
+    private setUsername(username: string) {
         DataManager.saveData(LookupKey.username, username);
     }
 
     private setPassword(password: string) {
-        const tempPass = Encryption.encryptText(this.user.password, this.user.username);
-        console.log('Saving Password:: ' + tempPass);
-
-        DataManager.saveData(this.lookupKey.password, tempPass);
-
-        console.log('Test decrypt');
-        console.log(Encryption.decryptText(tempPass, this.user.username));
-
-        console.log('Test getData');
-         console.log(DataManager.getData(this.lookupKey.username.toString()));
-         console.log(DataManager.getData(this.lookupKey.password.toString()));
+        const encryptedPassword = Encryption.encryptText(this.user.password, this.user.username);
+        DataManager.saveData(this.lookupKey.password, encryptedPassword);
     }
 
+    // Validdation
     private isUsernameValid(username: string): boolean {
         return username  && username.length >= 2;
     }

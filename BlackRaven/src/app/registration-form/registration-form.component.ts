@@ -24,15 +24,15 @@ export class RegistrationFormComponent {
   });
 
   saveNewUser() {
-
     // get form values
     this.newUser.username = this.registrationForm.get('username').value;
     this.newUser.password = this.registrationForm.get('password').value;
     this.newUser.confirmPassword = this.registrationForm.get('confirmPassword').value;
+
     try {
       this.userManager.createNewUser(this.newUser);
     } catch (t) {
-      console.log('Error' + t);
+      console.log(t);
     }
   }
 }

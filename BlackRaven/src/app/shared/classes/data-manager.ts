@@ -1,12 +1,6 @@
-import {CookieService} from 'ngx-cookie-service';
-import { LookupKey } from '../enums/lookup-key.enum';
-
 export class DataManager {
-    // private cookieService = new CookieService();
 
     static saveData(lookupKey, value) {
-        console.log(lookupKey);
-        console.log(value);
         this.setCookie(lookupKey, value);
     }
 
@@ -24,19 +18,19 @@ export class DataManager {
     }
 
     private static readCookie(lookupKey: string): string {
-    //    return document.cookie;
-    let name = lookupKey + '=';
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') {
-        c = c.substring(1);
+        const name = lookupKey + '=';
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
         }
-        if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-        }
-    }
-    return '';
+        return '';
     }
 }
